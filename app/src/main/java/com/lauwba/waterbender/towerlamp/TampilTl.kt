@@ -57,7 +57,8 @@ class TampilTl : AppCompatActivity() , View.OnClickListener{
 
         editid!!.setText(id)
 
-//        getEmployee()
+        getEmployee()
+
     }
 
     private fun getEmployee() {
@@ -91,17 +92,21 @@ class TampilTl : AppCompatActivity() , View.OnClickListener{
             val jsonObject = JSONObject(json)
             val result = jsonObject.getJSONArray(Config.TAG_JSON_ARRAY)
             val c = result.getJSONObject(0)
-            val towerlamp = c.getString(Config.TAG_TL)
+            val tl = c.getString(Config.TAG_TL)
             val shift = c.getString(Config.TAG_SHIFT)
             val status = c.getString(Config.TAG_STATUS)
             val hm = c.getString(Config.TAG_HM)
             val fuel = c.getString(Config.TAG_FUEL)
 
-            edittl?.setText(towerlamp)
+
+            edittl?.setText(tl)
             editshift?.setText(shift)
             editstatus?.setText(status)
             edithm?.setText(hm)
             editfuel?.setText(fuel)
+//            editTextName?.setText(name)
+//            editTextDesg?.setText(desg)
+//            editTextSalary?.setText(sal)
 
         } catch (e: JSONException) {
             e.printStackTrace()
