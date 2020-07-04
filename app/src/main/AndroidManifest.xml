@@ -9,19 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".towerlamp.TampilTl"></activity>
-        <activity android:name=".towerlamp.ListView" />
-        <activity android:name=".towerlamp.TampilSemuaTl" />
-        <activity android:name=".towerlamp.TowerLampInput">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".RegisterActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
+        <activity android:name=".towerlamp.TampilTl" />
+        <activity android:name=".towerlamp.ListView" />
+        <activity android:name=".towerlamp.TampilSemuaTl" />
+        <activity android:name=".towerlamp.TowerLampInput"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
