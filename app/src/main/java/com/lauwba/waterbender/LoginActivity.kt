@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.lauwba.waterbender.retrofit.API
 import com.lauwba.waterbender.retrofit.APIRespon
 import com.lauwba.waterbender.retrofit.RetrofitClient
+import com.lauwba.waterbender.towerlamp.TowerLampInput
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -59,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
                     if (response.body()!!.error) {
                         Toast.makeText(this@LoginActivity, response.body()!!.error_pesan, Toast.LENGTH_SHORT).show()
                     } else {
-                        intent= Intent(applicationContext, MainActivity::class.java)
+                        intent= Intent(applicationContext, TowerLampInput::class.java)
                         startActivity(intent)
                         Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
                         finish()
